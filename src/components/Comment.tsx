@@ -3,13 +3,13 @@
 import Reply from "@/components/Reply";
 import { CommentProps } from "@/libs/types";
 
-export default function Comment({ImagePath,username,commentTitle,likes,replies}:CommentProps) 
+export default function Comment({userImagePath,username,commentText,likeNum,replies}:CommentProps) 
 {
   return (
     <div>
     <div className="d-flex gap-2 my-2">
       <img
-        src={ImagePath}
+        src={userImagePath}
         width="48"
         height="48"
         className="rounded-circle"
@@ -21,14 +21,14 @@ export default function Comment({ImagePath,username,commentTitle,likes,replies}:
       >
         <span className="fw-semibold">{username}</span>
         <br />
-        <span>{commentTitle}</span>
+        <span>{commentText}</span>
         <div className="d-flex align-items-center gap-1">
           <img src="/like.svg" width={20}></img>
-          <span className="text-muted">{likes} คน</span>
+          <span className="text-muted">{likeNum} คน</span>
         </div>
       </div>
     </div>
-      {replies.map((x)=><Reply key={x.username} ImagePath={x.ImagePath} username={x.username} replyTitle={x.replyTitle} likes={x.likes}/>)}
+      {replies.map((x)=><Reply key={x.username} userImagePath={x.userImagePath} username={x.username} replyText={x.replyText} likeNum={x.likeNum}/>)}
     </div>
   );
 }
