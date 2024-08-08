@@ -2,7 +2,7 @@
 
 import { PostOwnerProps } from "@/libs/types";
 
-export default function PostOwnner({ username,userImagePath,Text,like}:PostOwnerProps) {
+export default function PostOwnner({username,userImagePath,Text,like}:PostOwnerProps) {
   return <div>
   <div className="vstack gap-3">
     <div className="d-flex align-items-center gap-3">
