@@ -2,11 +2,11 @@
 
 import { ReplyProps } from "@/libs/types";
 
-export default function Reply({ ImagePath, username, replyTitle, likes }:ReplyProps) {
+export default function Reply({ userImagePath, username, replyText, likeNum }:ReplyProps) {
   return (
     <div className="d-flex gap-2 my-2 ps-5">
       <img
-        src= {ImagePath}
+        src= {userImagePath}
         width="48"
         height="48"
         className="rounded-circle"
@@ -18,10 +18,10 @@ export default function Reply({ ImagePath, username, replyTitle, likes }:ReplyPr
       >
         <span className="fw-semibold">{username}</span>
         <br />
-        <span>{replyTitle}</span>
+        <span>{replyText}</span>
         <div className="d-flex align-items-center gap-1">
           <img src="/like.svg" width={20}></img>
-          <span className="text-muted">{likes} คน</span>
+          <span className="text-muted">{likeNum} คน</span>
         </div>
       </div>
     </div>
