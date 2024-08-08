@@ -14,7 +14,7 @@ interface CommentProps {
     userImagePath: string;
     commentText: string;
     likeNum: number;
-    replies: ReplyProps[];
+    replies: any;
 }
 export type { CommentProps };
 
