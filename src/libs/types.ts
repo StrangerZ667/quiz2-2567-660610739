@@ -2,18 +2,18 @@
 // Do not forget to export properly.
 
 interface ReplyProps {
-    ImagePath: string;
+    userImagePath: string;
     username: string;
-    replyTitle: string;
-    likes: number;
+    replyText: string;
+    likeNum: number;
 }
 export type { ReplyProps };
 
 interface CommentProps {
     username: string;
-    ImagePath: string;
-    commentTitle: string;
-    likes: number;
+    userImagePath: string;
+    commentText: string;
+    likeNum: number;
     replies: ReplyProps[];
 }
 export type { CommentProps };
