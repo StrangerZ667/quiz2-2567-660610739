@@ -28,7 +28,6 @@ export default function Comment({userImagePath,username,commentText,likeNum,repl
         </div>
       </div>
     </div>
-      {replies.map((x)=><Reply key={x.username} userImagePath={x.userImagePath} username={x.username} replyText={x.replyText} likeNum={x.likeNum}/>)}
     </div>
   );
 }
