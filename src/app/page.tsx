@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import {comments} from "@/libs/comments";
+import Reply from "@/components/Reply";
 import Comment from "@/components/Comment";
 import PostOwner from "@/components/PostOwnner";
 
@@ -20,6 +21,8 @@ export default function Home() {
         <PostOwner key="post" userImagePath="/profileImages/me.png" username="Kanchai Khumdee 660610739" Text="Quiz ง่ายจังเลยครับ ขอยาก ๆ กว่านี้ได้ไหม #261207" like={100}/>
         <div>
         {comments.map((x)=><Comment key={x.username} userImagePath={x.userImagePath} username={x.username} commentText={x.commentText} likeNum={x.likeNum} replies={x.replies}/>)}
+        <Reply userImagePath={"/profileImages/puppy.jpg"} username={"หมาน้อย"} replyText={"จริงค้าบบบบบบบบ"} likeNum={2}/>
+        <Reply userImagePath={"/profileImages/popcat.png"} username={"Cat Meme"} replyText={"ลิซ่าาาาา"} likeNum={0}/>
       </div>
       </div>
     </div>
