@@ -19,10 +19,10 @@ export default function Reply({ userImagePath, username, replyText, likeNum }:Re
         <span className="fw-semibold">{username}</span>
         <br />
         <span>{replyText}</span>
-        <div className="d-flex align-items-center gap-1">
+        {likeNum&&<div className="d-flex align-items-center gap-1">
           <img src="/like.svg" width={20}></img>
           <span className="text-muted">{likeNum} คน</span>
-        </div>
+        </div>}
       </div>
     </div>
       );
